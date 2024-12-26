@@ -5,8 +5,8 @@ module minter::token_components {
     use std::option::Option;
     use std::signer;
     use std::string::String;
-    use aptos_framework::object;
-    use aptos_framework::object::{ConstructorRef, Object};
+    use supra_framework::object;
+    use supra_framework::object::{ConstructorRef, Object};
 
     use aptos_token_objects::property_map;
     use aptos_token_objects::token;
@@ -32,7 +32,7 @@ module minter::token_components {
     /// This token is not owned by the address.
     const ENOT_TOKEN_OWNER: u64 = 8;
 
-    #[resource_group_member(group = aptos_framework::object::ObjectGroup)]
+    #[resource_group_member(group = supra_framework::object::ObjectGroup)]
     struct TokenRefs has key {
         /// Used to generate signer for the token. Can be used for extending the
         /// token or transferring out objects from the token
