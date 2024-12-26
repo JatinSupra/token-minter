@@ -1,7 +1,7 @@
 module minter::migration_helper {
 
     use std::signer;
-    use aptos_framework::object;
+    use supra_framework::object;
 
     /// Caller not authorized to call migration functions.
     const ENOT_MIGRATION_SIGNER: u64 = 1;
