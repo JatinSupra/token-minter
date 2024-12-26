@@ -32,8 +32,8 @@ module minter::coin_payment {
     use std::error;
     use std::signer;
     use std::string::String;
-    use aptos_framework::coin;
-    use aptos_framework::event;
+    use supra_framework::coin;
+    use supra_framework::event;
 
     /// Amount must be greater than zero.
     const EINVALID_AMOUNT: u64 = 1;
