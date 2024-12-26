@@ -5,7 +5,7 @@ module minter::collection_components {
     use std::option::Option;
     use std::signer;
     use std::string::String;
-    use aptos_framework::object::{Self, ConstructorRef, Object};
+    use supra_framework::object::{Self, ConstructorRef, Object};
 
     use aptos_token_objects::collection;
     use aptos_token_objects::collection::Collection;
@@ -31,7 +31,7 @@ module minter::collection_components {
     /// The property ref has been dropped.
     const EPROPERTY_REF_DROPPED: u64 = 7;
 
-    #[resource_group_member(group = aptos_framework::object::ObjectGroup)]
+    #[resource_group_member(group = supra_framework::object::ObjectGroup)]
     struct CollectionRefs has key {
         /// Used to mutate collection fields
         mutator_ref: Option<collection::MutatorRef>,
