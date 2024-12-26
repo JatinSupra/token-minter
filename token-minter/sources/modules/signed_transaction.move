@@ -37,8 +37,8 @@ module minter::signed_transaction {
     use std::error;
     use std::signer;
     use std::vector;
-    use aptos_framework::object;
-    use aptos_framework::object::{ConstructorRef, Object};
+    use supra_framework::object;
+    use supra_framework::object::{ConstructorRef, Object};
 
     /// The proof challenge is invalid.
     const EINVALID_CHALLENGE: u64 = 1;
@@ -51,7 +51,7 @@ module minter::signed_transaction {
     /// The key was not found in the authority public keys.
     const EKEY_NOT_FOUND: u64 = 5;
 
-    #[resource_group_member(group = aptos_framework::object::ObjectGroup)]
+    #[resource_group_member(group = supra_framework::object::ObjectGroup)]
     struct ProofData has key {
         authority_public_keys: vector<ed25519::UnvalidatedPublicKey>,
     }
