@@ -1,7 +1,7 @@
 module minter::transfer_token {
 
-    use aptos_framework::object;
-    use aptos_framework::object::{ConstructorRef, Object};
+    use supra_framework::object;
+    use supra_framework::object::{ConstructorRef, Object};
 
     use aptos_token_objects::token::Token;
 
