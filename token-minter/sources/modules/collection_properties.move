@@ -4,8 +4,8 @@ module minter::collection_properties {
     use std::signer;
     use std::string;
     use std::string::String;
-    use aptos_framework::event;
-    use aptos_framework::object::{Self, ConstructorRef, Object};
+    use supra_framework::event;
+    use supra_framework::object::{Self, ConstructorRef, Object};
     use aptos_token_objects::collection::Collection;
     use minter::migration_helper;
 
@@ -21,7 +21,7 @@ module minter::collection_properties {
         initialized: bool,
     }
 
-    #[resource_group_member(group = aptos_framework::object::ObjectGroup)]
+    #[resource_group_member(group = supra_framework::object::ObjectGroup)]
     struct CollectionProperties has copy, drop, key {
         /// Determines if the collection owner can mutate the collection_properties's description
         mutable_description: CollectionProperty,
