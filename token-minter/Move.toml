@@ -19,13 +19,13 @@ rev = "dev"
 subdir = "aptos-move/framework/supra-framework"
 
 [dependencies.AptosTokenObjects]
-git = 'https://github.com/aptos-labs/aptos-core.git'
-rev = 'mainnet'
+git = "https://github.com/Entropy-Foundation/aptos-core.git"
+rev = "dev"
 subdir = 'aptos-move/framework/aptos-token-objects'
 
 [dependencies.AptosToken]
-git = 'https://github.com/aptos-labs/aptos-core.git'
-rev = 'dev'
+git = "https://github.com/Entropy-Foundation/aptos-core.git"
+rev = "dev"
 subdir = 'aptos-move/framework/aptos-token'
 
 [dev-dependencies]
