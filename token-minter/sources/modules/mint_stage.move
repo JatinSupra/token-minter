@@ -7,10 +7,10 @@ module minter::mint_stage {
     use std::string::String;
     use std::vector;
     use aptos_std::smart_table::{Self, SmartTable};
-    use aptos_framework::event;
-    use aptos_framework::object;
-    use aptos_framework::object::{ConstructorRef, DeleteRef, ExtendRef, Object};
-    use aptos_framework::timestamp;
+    use supra_framework::event;
+    use supra_framework::object;
+    use supra_framework::object::{ConstructorRef, DeleteRef, ExtendRef, Object};
+    use supra_framework::timestamp;
 
     use aptos_token_objects::collection::Collection;
 
@@ -45,12 +45,12 @@ module minter::mint_stage {
     /// A mint stage cannot have multiple stages
     const ESTAGE_CANNOT_HAVE_MULTIPLE_STAGES: u64 = 15;
 
-    #[resource_group_member(group = aptos_framework::object::ObjectGroup)]
+    #[resource_group_member(group = supra_framework::object::ObjectGroup)]
     struct MintStageData has key {
         mint_stages: vector<Object<MintStage>>,
     }
 
-    #[resource_group_member(group = aptos_framework::object::ObjectGroup)]
+    #[resource_group_member(group = supra_framework::object::ObjectGroup)]
     struct MintStage has key {
         name: String,
         start_time: u64,
@@ -59,13 +59,13 @@ module minter::mint_stage {
         delete_ref: DeleteRef,
     }
 
-    #[resource_group_member(group = aptos_framework::object::ObjectGroup)]
+    #[resource_group_member(group = supra_framework::object::ObjectGroup)]
     struct Allowlist has key {
         /// Mapping from user address to remaining mint amount
         mint_allowances: SmartTable<address, u64>,
     }
 
-    #[resource_group_member(group = aptos_framework::object::ObjectGroup)]
+    #[resource_group_member(group = supra_framework::object::ObjectGroup)]
     struct PublicMintStageWithLimit has key {
         max_per_user: u64,
         user_balances: SmartTable<address, u64>,
