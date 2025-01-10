@@ -1,12 +1,10 @@
 [package]
 name = "TokenMinter"
 version = "1.0.0"
-authors = []
-upgrade_policy = "immutable"
 
 [addresses]
-minter = "0xfb7b6874a70d3b68fd336352c003b8f11527b8bc336a863ea91798014073d471"
-migration = "c77384471f05a5d1008d313c3d198d87b0635d8db5673b9e6d735e9a5d6ae35e"
+minter = "0x1c5acf62be507c27a7788a661b546224d806246765ff2695efece60194c6df05"
+migration = "0x1c5acf62be507c27a7788a661b546224d806246765ff2695efece60194c6df05"
 # Mock addresses for testing.
 minter_v2 = "c77384471f05a5d1008d313c3d198d87b0635d8db5673b9e6d735e9a5d6ae35e"
 
